@@ -246,7 +246,7 @@
   background-color: $light
   position: relative
   &-content
-    padding: 40px 0
+    padding-top: 40px
   &-icon
     text-align: center
     margin: auto
@@ -269,5 +269,60 @@
       max-width: 360px
       margin: auto
       margin-bottom: 10px
+  &:hover
+    .icon
+      transform: translateY(-20px)
       
+/////////////////////////////////////////////////////////////
+// portfolio
+/////////////////////////////////////////////////////////////
+
+.portfolio
+  background-color: #e68966
+  &-filter
+    display: flex
+    align-items: center
+    padding-top: 20px
+  .cats
+    display: flex
+    align-items: center
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      cursor: pointer
+      margin: 0 15px
+      position: relative
+      font-size: 12px
+      font-weight: 700
+      padding: 4px 8px 4px 12px
+      margin-left: 12px
+      margin-right: 12px
+      margin-bottom: 4px
+      color: #383A3C !important
+      background-color: #FCFAF7
+      text-decoration: none
+      cursor: pointer
+      border-bottom-right-radius: 3px
+      border-top-right-radius: 3px
+      box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+      transition: $anim
+      &:before
+        content: ""
+        float: left
+        position: absolute
+        top: 0
+        left: -12px
+        width: 0
+        height: 0
+        border-color: rgba(0, 0, 0, 0) #FCFAF7 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0)
+        border-style: solid
+        border-width: 12px 12px 12px 0
+      &:hover
+        transform: translateY(-5px)
+      span
+        font-size: 12px
+.filter__title
+  margin: 0
+  margin-right: 15px
 @import "media"
