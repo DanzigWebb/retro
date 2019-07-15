@@ -3,6 +3,11 @@
 @import "libs"
 @import "most"
 
+
+
+/////////////////////////////////////////////////////////////
+// header
+/////////////////////////////////////////////////////////////
 .header
   background-color: $accent
   height: 130px
@@ -60,12 +65,15 @@
       color: #F6EDD8
       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4)
       text-decoration: none
+
+/////////////////////////////////////////////////////////////
+// main
+/////////////////////////////////////////////////////////////
 .main
   background-color: $accent
   padding-top: 130px
   padding-bottom: 30px
   position: relative
-  min-height: 100vh
   +media-breakpoint-down(xs)
     padding-top: 80px
   &-wrap
@@ -152,7 +160,9 @@
     border-width: 12px 20px 0 0
 
 
-// SLIDER
+/////////////////////////////////////////////////////////////
+// slider
+/////////////////////////////////////////////////////////////
 .slider
   max-width: 940px
   margin: 40px auto
@@ -193,9 +203,7 @@
   position: absolute
   top: 50%
   transform: translateY(-50%)
-  .fas
-    z-index: -1
-    position: relative
+  transition: $anim
   &--prev,
   &--next
     position: absolute
@@ -217,5 +225,49 @@
   text-align: center
   color: #F6EDD8
 
+.retroicon-chevron-left,
+.retroicon-chevron-right
+  z-index: -1
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #828C8E
+  transition: $anim
+.slider-control:hover
+  .retroicon-chevron-left,
+  .retroicon-chevron-right
+    color: $dark
+/////////////////////////////////////////////////////////////
+// about
+/////////////////////////////////////////////////////////////
 
+.about
+  background-color: $light
+  position: relative
+  &-content
+    padding: 40px 0
+  &-icon
+    text-align: center
+    margin: auto
+    margin-bottom: 25px
+.about-item
+  margin-bottom: 20px
+  &__title
+    text-align: center
+    font-size: 40px
+  &__sub
+    text-align: center
+  hr
+    border: none
+    background-color: rgba(56,58,60,0.9)
+    height: 3px
+    width: 40px
+    margin: 0 auto 10px auto
+  p
+    +media-breakpoint-down(xs)
+      max-width: 360px
+      margin: auto
+      margin-bottom: 10px
+      
 @import "media"
