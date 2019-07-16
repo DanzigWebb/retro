@@ -68,22 +68,24 @@ fixedHeader()
 // filter portfolio
 
 let filter = function () {
+
   let cats = document.querySelectorAll('.cats-choise');
-  let catsItems = document.querySelectorAll('.port-item');
+  let catsItems = document.querySelectorAll('.port-item');  
+
   cats.forEach(item => {
     item.addEventListener('click', function (e) {
       showActive();
-
       let categoryChoice = this.dataset.slug;
-
-      catsItems.forEach(portCart => {
-        if (categoryChoice == 'all') {
-          portCart.style.display = 'block'
-        }
+      setTimeout(() => {
+        catsItems.forEach(portCart => {
+          if (categoryChoice == 'all') {
+            portCart.style.display = 'block'
+          }
           else if (portCart.dataset.cat.includes(categoryChoice)) {
-          portCart.style.display = 'block'
-        }
-      })
+            portCart.style.display = 'block'
+          }
+        })
+      }, 10);
     })
   })
 
@@ -92,12 +94,12 @@ let filter = function () {
       item.style.display = 'none'
     })
   }
-  showActive()
+
   catsItems.forEach(portCart => {
+    portCart.style.display = 'none'
     if (portCart.dataset.cat.includes('resources')) {
       portCart.style.display = 'block'
     }
   })
 }
-
 filter()
