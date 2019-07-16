@@ -70,6 +70,7 @@ fixedHeader()
 let filter = function () {
   let cats = document.querySelectorAll('.cats-choise');
   console.log(cats)
+  cats.forEach()
 }
 
 filter()
