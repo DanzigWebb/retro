@@ -69,8 +69,35 @@ fixedHeader()
 
 let filter = function () {
   let cats = document.querySelectorAll('.cats-choise');
-  console.log(cats)
-  cats.forEach()
+  let catsItems = document.querySelectorAll('.port-item');
+  cats.forEach(item => {
+    item.addEventListener('click', function (e) {
+      showActive();
+
+      let categoryChoice = this.dataset.slug;
+
+      catsItems.forEach(portCart => {
+        if (categoryChoice == 'all') {
+          portCart.style.display = 'block'
+        }
+          else if (portCart.dataset.cat.includes(categoryChoice)) {
+          portCart.style.display = 'block'
+        }
+      })
+    })
+  })
+
+  let showActive = function () {
+    catsItems.forEach(item => {
+      item.style.display = 'none'
+    })
+  }
+  showActive()
+  catsItems.forEach(portCart => {
+    if (portCart.dataset.cat.includes('resources')) {
+      portCart.style.display = 'block'
+    }
+  })
 }
 
 filter()
