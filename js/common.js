@@ -64,3 +64,12 @@ let fixedHeader = function () {
 }
 
 fixedHeader()
+
+// filter portfolio
+
+let filter = function () {
+  let cats = document.querySelectorAll('.cats-choise');
+  console.log(cats)
+}
+
+filter()

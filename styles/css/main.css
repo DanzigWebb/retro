@@ -3456,6 +3456,14 @@ h4 {
   margin-bottom: 20px;
 }
 
+.port-item:hover {
+  text-decoration: none;
+}
+
+.port-item:hover .port__icon {
+  top: -30px;
+}
+
 .port__icon {
   text-align: center;
   font-size: 30px;
@@ -3477,14 +3485,16 @@ h4 {
   border-radius: 50%;
   position: relative;
   top: -20px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .port__title {
   color: #383a3c;
   font-family: 'Roboto Slab', serif;
   position: absolute;
-  bottom: 25px;
-  font-size: 16px;
+  bottom: 30px;
+  font-size: 14px;
   left: 0;
   right: 0;
   text-align: center;

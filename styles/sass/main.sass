@@ -339,6 +339,10 @@
       padding: 5px
       background-color: #fff
       margin-bottom: 20px
+    &:hover
+      text-decoration: none
+      .port__icon
+        top: -30px
   &__icon
     text-align: center
     font-size: 30px
@@ -354,12 +358,13 @@
     border-radius: 50%
     position: relative
     top: -20px
+    transition: $anim
   &__title
     color: $dark
     font-family: 'Roboto Slab', serif
     position: absolute
-    bottom: 25px
-    font-size: 16px
+    bottom: 30px
+    font-size: 14px
     left: 0
     right: 0
     text-align: center
