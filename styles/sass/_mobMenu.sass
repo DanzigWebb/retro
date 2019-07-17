@@ -1,0 +1,40 @@
+.mob-menu
+  position: fixed
+  left: 0
+  right: 0
+  top: 80px
+  bottom: 0
+  background-image: url(../../img/grain.png)
+  background-color: #7ac0c0
+  z-index: 10
+  transform: translateX(-100%)
+  transition: $anim
+  display: flex
+  align-items: center
+  justify-content: center
+  menu
+    height: 60%
+    margin: auto
+    margin: 0
+    padding: 0
+  &.active
+    transform: translateX(0)
+
+.mobile-menu__link
+  transform: translateX(-100%)
+  opacity: 0
+  transition: $anim
+  font-size: 26px
+  text-transform: uppercase
+  a
+    color: #F6EDD8
+    font-weight: bold
+  &.active
+    transform: translateX(0)
+    opacity: 1
+
+.header-menu--mob
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  height: 100%

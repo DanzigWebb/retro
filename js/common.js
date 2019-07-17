@@ -1,3 +1,44 @@
+// mobile menu
+
+let mobileMenu = function () {
+  const btn = document.querySelector('.mobile-icon-menu');
+  const hamburger = btn.querySelector('.menu__item--doner')
+  const menu = document.querySelector('.mob-menu');
+  const menuLink = document.querySelectorAll('.mobile-menu__link');
+  let count;
+  btn.addEventListener('click', function () {
+    count = 0.2;
+    menuInit ()
+  });
+  menu.addEventListener('click', (e) => {
+    
+    menuLink.forEach(link => {
+      if (e.target == link.children[0]) menuRe()
+    })
+  })
+  let menuInit = () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+
+    menuLink.forEach(link => {
+      link.style.transitionDelay = count + 's';
+      count = count + 0.2
+      link.classList.toggle('active');
+    })
+  }
+  let menuRe = () => {
+    hamburger.classList.remove('active');
+    menu.classList.remove('active');
+    menuLink.forEach(link => {
+      link.style.transitionDelay = 0;
+      link.classList.remove('active');
+    })
+    count = 0
+  }
+}
+mobileMenu()
+
+
 // slider
 
 let retroSlider = function () {
@@ -70,7 +111,7 @@ fixedHeader()
 let filter = function () {
 
   let cats = document.querySelectorAll('.cats-choise');
-  let catsItems = document.querySelectorAll('.port-item');  
+  let catsItems = document.querySelectorAll('.port-item');
 
   cats.forEach(item => {
     item.addEventListener('click', function (e) {
