@@ -7,7 +7,7 @@ let mobileMenu = function () {
   const menuLink = document.querySelectorAll('.mobile-menu__link');
   let count;
   btn.addEventListener('click', function () {
-    count = 0.2;
+    count = 0;
     menuInit ()
   });
   menu.addEventListener('click', (e) => {
