@@ -21,17 +21,19 @@
 
 <body class="site-body" id="my-body">
 
+	<!-- header -->
+
 	<header class="header">
 		<div class="container">
 			<menu>
 				<ul class="header-menu">
-					<li class="header-menu-list"><a href="#/" class="header__link">About me</a></li>
-					<li class="header-menu-list"><a href="#/" class="header__link">Portfolio</a></li>
-					<a href="#/" class="header-menu-logo">
+					<li class="header-menu-list"><a href="#about" class="header__link">About me</a></li>
+					<li class="header-menu-list"><a href="#portfolio" class="header__link">Portfolio</a></li>
+					<a href="#my-body" class="header-menu-logo">
 						<img src="img/block_divider_dark.png" alt="">
 					</a>
-					<li class="header-menu-list"><a href="#/" class="header__link">My blog</a></li>
-					<li class="header-menu-list"><a href="#/" class="header__link">Contact me</a></li>
+					<li class="header-menu-list"><a href="#blog" class="header__link">My blog</a></li>
+					<li class="header-menu-list"><a href="#footer" class="header__link">Contact me</a></li>
 				</ul>
 			</menu>
 		</div>
@@ -46,8 +48,10 @@
 			</button>
 		</div>
 	</header>
-	<main class="main">
 
+	<!-- main -->
+
+	<main class="main">
 		<div class="main-wrap">
 			<hr class="hr--top">
 			<div class="container">
@@ -95,11 +99,12 @@
 		</div>
 		<hr class="hr--bottom">
 	</main>
-	<section class="section about">
+
+	<!-- about -->
+
+	<section class="section about" id="about">
 		<hr class="hr--top">
 		<hr class="hr--bottom">
-
-
 		<div class="container">
 			<div class="heading">
 				<h2 class="heading__title">ABOUT ME</h2>
@@ -163,7 +168,9 @@
 		</div>
 	</section>
 
-	<section class="section portfolio">
+	<!-- portfolio -->
+
+	<section class="section portfolio" id="portfolio">
 		<hr class="hr--top">
 		<hr class="hr--bottom">
 		<div class="heading">
@@ -266,7 +273,9 @@
 		</div>
 	</section>
 
-	<section class="section blog">
+	<!-- blog -->
+
+	<section class="section blog" id="blog">
 		<hr class="hr--top">
 		<hr class="hr--bottom">
 		<div class="container">
@@ -322,9 +331,11 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
-	<section class="section footer">
+
+	<!-- footer (contact) -->
+
+	<section class="section footer" id="footer">
 		<hr class="hr--top">
 		<hr class="hr--bottom">
 		<div class="container">
@@ -360,18 +371,21 @@
 		</div>
 	</section>
 
+	<!-- mob menu -->
+
 	<div class="mob-menu">
 		<menu>
 			<ul class="header-menu header-menu--mob">
-				<li class="header-menu-list mobile-menu__link"><a href="#/">About me</a></li>
-				<li class="header-menu-list mobile-menu__link"><a href="#/">Portfolio</a></li>
-				<li class="header-menu-list mobile-menu__link"><a href="#/">My blog</a></li>
-				<li class="header-menu-list mobile-menu__link"><a href="#/">Contact me</a></li>
+				<li class="header-menu-list mobile-menu__link"><a href="#about">About me</a></li>
+				<li class="header-menu-list mobile-menu__link"><a href="#portfolio">Portfolio</a></li>
+				<li class="header-menu-list mobile-menu__link"><a href="#blog">My blog</a></li>
+				<li class="header-menu-list mobile-menu__link"><a href="#footer">Contact me</a></li>
 			</ul>
 		</menu>
 	</div>
+
+	<!-- end -->
 	<script src="js/common.js"></script>
 </body>
-
 
 </html>

@@ -8,10 +8,10 @@ let mobileMenu = function () {
   let count;
   btn.addEventListener('click', function () {
     count = 0;
-    menuInit ()
+    menuInit()
   });
   menu.addEventListener('click', (e) => {
-    
+
     menuLink.forEach(link => {
       if (e.target == link.children[0]) menuRe()
     })
@@ -144,3 +144,23 @@ let filter = function () {
   })
 }
 filter()
+
+// lazy scroll to anchor
+
+const lazyScrolling = function () {
+  let links = document.querySelectorAll('a');
+  links.forEach(link => {
+    if (link.getAttribute('href').match('\#\\w') !== null) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        let anchor = document.querySelector(link.getAttribute('href'));
+        let scrollLength = anchor.getBoundingClientRect().top;
+        console.log(anchor);
+        window.scrollBy(0, scrollLength - 120);
+
+      })
+    }
+  })
+}
+lazyScrolling()
+
