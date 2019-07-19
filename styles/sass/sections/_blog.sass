@@ -1,0 +1,41 @@
+/////////////////////////////////////////////////////////////
+// blog
+/////////////////////////////////////////////////////////////
+  
+.blog
+  background-color: #e3e0dd
+  &-content
+    margin: 40px 0
+  &-item
+    margin-bottom: 35px
+    h3
+      display: inline-block
+      font-size: 24px
+      font-weight: 700
+      text-transform: none
+      margin-bottom: 4px
+      font-family: "Roboto Slab", sans-serif
+    p
+      font-size: 16px
+      line-height: 1.5
+    &-img
+      padding: 5px
+      background-color: #fff
+      border-radius: 5px
+      +media-breakpoint-down(xs)
+        max-width: 380px
+        margin: auto
+        margin-bottom: 15px
+    img
+      width: 100%
+    hr
+      height: 3px
+      width: 40px
+      background-color: $dark
+      margin: 0
+      margin-bottom: 20px
+p.blog-item__bread
+  font-family: "Oswald", serif
+  text-transform: uppercase
+  font-size: 13px
+  font-weight: bold

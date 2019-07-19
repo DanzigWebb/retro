@@ -1,3 +1,8 @@
+@import "hamb"
+@import "header"
+@import "mobMenu"
+@import "slider"
+  
 /////////////////////////////////////////////////////////////
 // body
 /////////////////////////////////////////////////////////////
@@ -32,11 +37,25 @@ h4
   font-weight: lighter
   font-size: 22px
   text-transform: uppercase
+
+.light
+  color: $light
 /////////////////////////////////////////////////////////////
 // heading
 /////////////////////////////////////////////////////////////
 .heading
   text-align: center
+  &__sub
+    font-family: Oswald
+  &__title
+    font-size: 90px
+    text-shadow: 1px 2px #FCFAF7, 3px 4px #484A4D
+    line-height: 1.1
+    margin: 0
+    &.light
+      text-shadow: 1px 2px #484A4D, 3px 4px #D4CEBF
+    +media-breakpoint-down(xs)
+      font-size: 60px
   &__decor
     display: block
     margin: 10px 0
@@ -51,8 +70,11 @@ h4
       height: 2px
       background: $dark
       margin: 0 10px
-  &__sub
-    font-family: Oswald
+    &.light
+      &:before,
+      &:after
+        background: $light
+
 /////////////////////////////////////////////////////////////
 // section
 /////////////////////////////////////////////////////////////

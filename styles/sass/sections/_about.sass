@@ -1,0 +1,34 @@
+/////////////////////////////////////////////////////////////
+// about
+/////////////////////////////////////////////////////////////
+
+.about
+  background-color: $light
+  position: relative
+  &-content
+    padding-top: 40px
+  &-icon
+    text-align: center
+    margin: auto
+    margin-bottom: 25px
+.about-item
+  margin-bottom: 20px
+  &__title
+    text-align: center
+    font-size: 40px
+  &__sub
+    text-align: center
+  hr
+    border: none
+    background-color: rgba(56,58,60,0.9)
+    height: 3px
+    width: 40px
+    margin: 0 auto 10px auto
+  p
+    +media-breakpoint-down(xs)
+      max-width: 360px
+      margin: auto
+      margin-bottom: 10px
+  &:hover
+    .icon
+      transform: translateY(-20px)
