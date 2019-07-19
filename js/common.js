@@ -155,9 +155,30 @@ const lazyScrolling = function () {
         e.preventDefault();
         let anchor = document.querySelector(link.getAttribute('href'));
         let scrollLength = anchor.getBoundingClientRect().top;
-        console.log(anchor);
-        window.scrollBy(0, scrollLength - 120);
+        let oftop = window.scrollY + scrollLength;
 
+        let scrollBot = () => {
+          let top = setInterval(function () {
+            if (window.scrollY < oftop - 110) {
+              window.scrollBy(0, 30);
+            }
+            else clearInterval(top);
+          }, 10);
+        }
+        let scrollTop = () => {
+          let top = setInterval(function () {
+            if (window.scrollY > oftop - 110) {
+              window.scrollBy(0, -30);
+            }
+            else clearInterval(top);
+          }, 10);
+        }
+
+        if (scrollLength > 0) {
+          scrollBot()
+        } else {
+          scrollTop()
+        }
       })
     }
   })
