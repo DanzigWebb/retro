@@ -159,7 +159,7 @@ const lazyScrolling = function () {
 
         let scrollBot = () => {
           let top = setInterval(function () {
-            if (window.scrollY < oftop - 110) {
+            if (window.scrollY < oftop) {
               window.scrollBy(0, 30);
             }
             else clearInterval(top);
@@ -167,7 +167,7 @@ const lazyScrolling = function () {
         }
         let scrollTop = () => {
           let top = setInterval(function () {
-            if (window.scrollY > oftop - 110) {
+            if (window.scrollY > oftop) {
               window.scrollBy(0, -30);
             }
             else clearInterval(top);
