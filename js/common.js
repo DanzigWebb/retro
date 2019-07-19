@@ -145,7 +145,7 @@ let filter = function () {
 }
 filter()
 
-// lazy scroll to anchor
+// lazy scroll
 
 const lazyScrolling = function () {
   let links = document.querySelectorAll('a');
